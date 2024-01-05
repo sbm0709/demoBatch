@@ -2,10 +2,6 @@ package com.demobatch.dto;
 
 import lombok.*;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
 
 @Getter
 @Setter
@@ -13,6 +9,7 @@ import javax.persistence.Table;
 @ToString
 @AllArgsConstructor
 public class DistrictCountDTO {
+
     private String  shopName;
 
     private String districtName;

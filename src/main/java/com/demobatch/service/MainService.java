@@ -22,8 +22,6 @@ public class MainService {
 
     public List<DistrictCountDTO> selectResult(){
         RowMapper<DistrictCountDTO> rowMapper = (rs, rowNum) -> {
-            System.out.println(rs.getString("districtName"));
-            System.out.println(rs.getString("viewCount"));
             DistrictCountDTO districtCountDTO = new DistrictCountDTO();
             districtCountDTO.setDistrictName(rs.getString("districtName"));
             districtCountDTO.setViewCount(rs.getInt("viewCount"));

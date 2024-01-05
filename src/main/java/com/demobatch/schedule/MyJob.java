@@ -26,20 +26,19 @@ public class MyJob {
     )
     public synchronized void shopViewCountToCsv() throws IOException {
         List<DistrictCountDTO> list = mainService.selectResult();
-        BufferedWriter bufferedWriter = null;
 
         LocalDateTime date = LocalDateTime.now();
-        String nowDate = date.format(DateTimeFormatter.ofPattern("yyyyMMdd_hhmm"));
+        String nowDate = date.format(DateTimeFormatter.ofPattern("yyyyMMdd_HHmm"));
 
         String filePath = "C:\\국비수업\\"+nowDate+"_통계.csv";
         File file = new File(filePath);
 
 
-        if(!file.exists()){
-            file.createNewFile();
-        }
+//        if(!file.exists()){
+//            file.createNewFile();
+//        }
 
-        bufferedWriter = new BufferedWriter(new FileWriter(file, false));
+        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(file, false));
         bufferedWriter.write("시/군/구,총조회수");
         bufferedWriter.newLine();
 
